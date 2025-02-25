@@ -6,6 +6,7 @@ public class HighlightController : MonoBehaviour
 {
     [SerializeField] GameObject highlighter;
     [SerializeField] float offset = 0.1f;
+
     GameObject currentTarget;
 
     public void Highlight(GameObject target){

@@ -28,7 +28,7 @@ public class DayTimeController : MonoBehaviour
         
         TimeUI(time);
         LightCurve(time);
-
+        
     }
 
     private void TimeByDays()
