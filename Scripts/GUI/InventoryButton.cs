@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InventoryButton : MonoBehaviour
+public class InventoryButton : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] Image icon;
     [SerializeField] TextMeshProUGUI text;
@@ -39,4 +40,14 @@ public class InventoryButton : MonoBehaviour
         icon.gameObject.SetActive(false);
     }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        //when click on UI Element is happening , 
+        //the inventory information (that is instance of ItemContainer Scripts) will be retrieve with specific index
+        //and then absorb into function inside instance of itemDragAndDropController Scripts
+        ItemContainer inventory = GameManager.Instance.inventoryContainer;
+        GameManager.Instance.dragAndDropController.OnClick(inventory.slots[thisIndex]);
+
+        //transform.parent.GetComponent<InventoryPanel>().Show();
+    }
 }

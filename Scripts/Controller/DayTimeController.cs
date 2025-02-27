@@ -15,10 +15,16 @@ public class DayTimeController : MonoBehaviour
     [SerializeField] TextMeshProUGUI TimeText;
     [SerializeField] float TimeScale = 120;
 
+    public float startTime;
+
     float secondInDay = 86400f;
     float time = 0;
     int days = 0;
+    
 
+    private void Start(){
+        time += startTime;
+    }
     private void Update()
     {
         time += Time.deltaTime*TimeScale; 

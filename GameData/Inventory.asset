@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5816cfc278a18b4aa8a8569e6e02bf5, type: 3}
-  m_Name: ItemContainer
+  m_Name: Inventory
   m_EditorClassIdentifier: 
   slots:
-  - item: {fileID: 0}
+  - item: {fileID: 11400000, guid: 4de07e91688f14f4c8ce68a2e4ad8098, type: 2}
     count: 0
-  - item: {fileID: 0}
-    count: 0
-  - item: {fileID: 0}
-    count: 0
+  - item: {fileID: 11400000, guid: c0ce6235ffada9d4fbdab7927cd7e916, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: 70f2c756322bd7e4cbdbea2c0a23b101, type: 2}
+    count: 10
   - item: {fileID: 0}
     count: 0
   - item: {fileID: 0}
